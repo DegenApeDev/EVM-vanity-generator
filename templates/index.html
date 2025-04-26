@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVM Vanity Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>EVM Vanity Wallet Generator</h1>
+    <input type="text" id="prefix" placeholder="Enter hex prefix (e.g. cafe)">
+    <input type="text" id="suffix" placeholder="Enter hex suffix (e.g. dead)">
+    <p class="warning">Leave one empty to use prefix-only or suffix-only; combined filters may take longer.</p>
+    <button id="generate">Generate</button>
+    <div id="result"></div>
+  </div>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
